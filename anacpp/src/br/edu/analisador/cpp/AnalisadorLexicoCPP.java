@@ -18,7 +18,7 @@ public class AnalisadorLexicoCPP {
 				new FileReader(inputCPP));
 
 		while ((tokensCPP = definicoesAnalisadorLexicoCPP.yylex()) != null) {
-			System.out.println("(Nome: " + tokensCPP.nome + ", Valor: " + tokensCPP.valor + ", Linha: " + tokensCPP.linha + ")");
+			System.out.println("(" + tokensCPP.linha+ ", " + tokensCPP.nome + ", \"" + tokensCPP.valor + "\")");
 		}
 	}
 }
