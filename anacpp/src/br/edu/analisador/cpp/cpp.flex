@@ -73,8 +73,8 @@ STRINGCHARACTER = [^\r\n\"\\]
 
 <YYINITIAL> {
     {BLANK} {}
-    {NUMBER} {return createTokensCPP("number", yytext()); }
-    {COMMENTS} {}
+    {NUMBER} {return createTokensCPP("number", yytext());}
+    {COMMENTS} {return createTokensCPP("comment", yytext());}
 
     /* Simbolos especiais */
     {BRACES_LEFT} {return createTokensCPP("operator", "{");}
